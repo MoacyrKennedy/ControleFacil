@@ -27,6 +27,7 @@ static void ConfigurarInjecaoDeDependencia(WebApplicationBuilder builder)
     builder.Services
     .AddSingleton(builder.Configuration)
     .AddSingleton(builder.Environment);
+    .AddScoped<IUsuarioRepository, UsuarioRepository>();
 }
 
 // Configura o serviços da API.
